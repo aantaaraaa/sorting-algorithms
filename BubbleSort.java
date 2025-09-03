@@ -18,7 +18,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter size of array: ");
+        System.out.println("Enter size of array: ");
         int n = sc.nextInt();
 
         int[] arr = new int[n];
@@ -27,7 +27,7 @@ public class BubbleSort {
             arr[i] = sc.nextInt();
         }
 
-        bubbleSort(arr); // Call bubble sort function
+        bubbleSort(arr); 
 
         System.out.println("Sorted array:");
         for (int num : arr) {
