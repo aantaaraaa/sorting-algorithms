@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class RecursiveSelection {
+public class RecursiveSelectionSort {
 
     public static void selectionSort(int[] arr, int start, int n) {
 
