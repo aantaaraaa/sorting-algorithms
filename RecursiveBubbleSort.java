@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class RecursiveBubble {
+public class RecursiveBubbleSort {
 
     public static void recursiveBubble(int[] arr, int n) {
 
