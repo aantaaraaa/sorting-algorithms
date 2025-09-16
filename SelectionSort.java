@@ -1,50 +1,54 @@
 import java.util.*;
 
 public class SelectionSort {
-    public static void selectionSort(int[] arr) {
-        int n = arr.length;
+
+    public static void selectionSort(int[] arr, int n) {
 
         for (int i = 0; i < n - 1; i++) {
-            int minIndex = i;
+            int mini = i;
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
+                if (arr[j] < arr[mini]) {
+                    mini = j;
                 }
             }
 
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
+            int temp = arr[mini];
+            arr[mini] = arr[i];
             arr[i] = temp;
         }
+
+        System.out.println("Array after sorting: ");
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i] + " ");
+        }
+
+        System.out.println();
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter size of array: ");
+        System.out.println("Enter the number of elements: ");
         int n = sc.nextInt();
 
         int[] arr = new int[n];
-        System.out.println("Enter elements:");
+
+        System.out.println("Enter the elements of the array:  ");
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
 
-        selectionSort(arr);
-
-        System.out.println("Sorted array:");
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
+        selectionSort(arr, n);
     }
 }
 
-/*
- * Time Complexity:
- * - Worst Case: O(n^2) → array in descending order
- * - Average Case: O(n^2) → random order array
- * - Best Case: O(n^2) → even if array is already sorted, we still scan to find
- * minimum
- * Space Complexity: O(1) → sorting is done in-place without extra memory
- *
+/**
+ * Selection Sort (Iterative)
+ * Time Complexity: O(n^2)
+ * - Outer loop runs (n-1) times
+ * - Inner loop scans the remaining array each time
+ * - Total comparisons ~ n*(n-1)/2
+ * Space Complexity: O(1)
+ * - Sorting is done in-place
+ * - Only a constant temp variable is used
  */
