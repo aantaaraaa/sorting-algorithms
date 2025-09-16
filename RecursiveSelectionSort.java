@@ -5,7 +5,8 @@ public class RecursiveSelectionSort {
 
     public static void selectionSort(int[] arr, int start, int n) {
 
-        if(start >= n-1) return;
+        if (start >= n - 1)
+            return;
 
         int mini = start;
         for (int j = start + 1; j < n; j++) {
@@ -43,3 +44,13 @@ public class RecursiveSelectionSort {
         System.out.println();
     }
 }
+
+/**
+ * Selection Sort (Recursive)
+ * Time Complexity: O(n^2)
+ * - Each recursive call scans the remaining array for the minimum
+ * - Total comparisons ~ n*(n-1)/2
+ * Space Complexity: O(n)
+ * - Recursion depth goes up to n calls
+ * - Extra stack memory is used
+ */
